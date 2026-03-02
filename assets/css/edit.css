@@ -1,0 +1,105 @@
+/* ===== Page Layout ===== */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa, #e4efe9);
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+}
+/*=====Container Wrapper=====*/
+.product-form {
+    background: #ffffff;
+    width: 100%;
+    max-width: 520px;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+/*=====Title=====*/
+h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 26px;
+    font-weight: 700;
+    color: #1e2a38;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/*=====Form Group=====*/
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/*=====Labels=====*/
+.form-group label {
+    margin-bottom: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #6c7a89;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/*=====Inputs =====*/
+.form-group input,
+.form-group select {
+    padding: 12px 14px;
+    border: 1px solid #e0e6ed;
+    border-radius: 12px;
+    font-size: 14px;
+    background-color: #f9fbfd;
+    transition: all 0.3s ease;
+}
+
+/*=====Focus Effect=====*/
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #4CAF50;
+    background-color: #fff;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(76, 175, 80, 0.15);
+}
+
+/*=====Button=====*/
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #4CAF50, #2e7d32);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(46, 125, 50, 0.3);
+}
+
+.submit-btn:active {
+    transform: scale(0.98);
+}
+
+/*=====Animation=====*/
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

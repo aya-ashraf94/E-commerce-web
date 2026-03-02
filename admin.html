@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2 class="logo">AYA ADMIN</h2>
+
+            <ul class="menu">
+                <li class="active"><i class="fa-solid fa-gauge"></i> Dashboard</li>
+                <li><i class="fa-solid fa-box"></i> Products</li>
+                <li><i class="fa-solid fa-plus"></i> Add Product</li>
+                <li><i class="fa-solid fa-cart-shopping"></i> Orders</li>
+                <li><i class="fa-solid fa-users"></i> Users</li> 
+                <li><i class="fa-solid fa-right-from-bracket"></i> Logout</li>
+            </ul>
+        </aside>
+
+        <!-- Main -->
+        <div class="main">
+            <!-- Topbar -->
+            <div class="topbar">
+                <h3>Dashboard Overview</h3>
+                <div class="admin-info">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Admin</span>
+                </div>
+            </div>
+            <!-- Cards -->
+            <div class="cards">
+                <div class="card">
+                    <i class="fa-solid fa-box"></i>
+                    <div>
+                        <h4 id="productsCount">0</h4>
+                        <p>Products</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <div>
+                        <h4 id="ordersCount">0</h4>
+                        <p>Orders</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-users"></i>
+                    <div>
+                        <h4 id="usersCount">0</h4>
+                        <p>Users</p>
+                    </div>
+                </div>
+                <!-- <div class="card">
+                    <i class="fa-solid fa-dollar-sign"></i>
+                    <div>
+                        <h4>$4,250</h4>
+                        <p>Revenue</p>
+                    </div>
+                </div> -->
+            </div>
+            <!-- Content -->
+            <div class="content">
+                <h3>Recent Activity</h3>
+                <p>Here you can manage products and orders.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/admin.js"></script>
+</body>
+
+</html>

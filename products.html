@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/media.css">
+</head>
+<!-- Overlay -->
+<div class="sidebar-overlay"></div>
+
+<!-- Sidebar -->
+<div class="mobile-sidebar">
+    <div class="sidebar-header">
+        <img src="assets/imgs/logo.svg" alt="logo">
+        <button class="close-sidebar">&times;</button>
+    </div>
+    <ul class="sidebar-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Shop</a></li>
+        <li><a href="products.html">Product</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact Us</a></li>
+    </ul>
+</div>
+
+<body>
+    <!--HEADER TOP-->
+    <section class="header-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-4 col-lg-6 col-12 align-self-center">
+                    <ul class="ht-left">
+                        <li><a href="#footer">Download App</a></li>
+                        <li><a href="#">Online Tracking</a></li>
+                    </ul>
+                </div>
+                <div class="col-xl-4 col-lg-6 col-12 d-xl-block d-none text-center align-self-center">
+                    <div class="header-top-content">
+                        <p>- Free shipping for orders over $50 -</p>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 col-12 text-lg-end align-self-center">
+                    <ul class="ht-right">
+                        <li id="registerNav"><a href="register.html">Register</a></li>
+                        <li id="logoutNav" style="display: none;">
+                            <a href="#" onclick="logout()">Logout</a>
+                        </li>
+                        <li id="accountNav"><a href="login.html">Account</a></li>
+                        <li id="userNav" style="display: none;">
+                            <a href="#" id="usernameDisplay"></a>
+                        </li>
+                        <li class="language-dropdown">
+                            <a href="#" id="langToggle">
+                                <i class="fa-solid fa-globe"></i> EN
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" data-lang="EN">EN</a></li>
+                                <li><a href="#" data-lang="AR">AR</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--HEADER MIDDLE-->
+    <section class="header-middle">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-lg-4 col-md-6 col-6 align-self-center">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="assets/imgs/logo.svg" alt="logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-4 d-none d-lg-block col-md-12 align-self-center">
+                    <div class="search-bar">
+                        <form action="#" method="get">
+                            <div class="search-category">
+                                <select class="category-select">
+                                    <option>All Categories</option>
+                                    <option>Rice</option>
+                                    <option>Olive Oil</option>
+                                    <option>Green Tea</option>
+                                    <option>Coffee</option>
+                                    <option>Super Food</option>
+                                    <option>Cocunut Oil</option>
+                                    <option>Black Rice</option>
+                                    <option>Seeds and Nuts</option>
+                                    <option>Pink Solt</option>
+                                    <option>Meat</option>
+                                </select>
+                                <!-- <div class="nice-select category-select" tabindex="0"><span class="current">All
+                                        Categories</span>
+                                    <ul class="list">
+                                        <li data-value="All Categories" class="option selected">All Categories</li>
+                                        <li data-value="Rice" class="option focus">Rice</li>
+                                        <li data-value="Olive Oil" class="option">Olive Oil</li>
+                                        <li data-value="Green Tea" class="option">Green Tea</li>
+                                        <li data-value="Coffee" class="option">Coffee</li>
+                                        <li data-value="Super Food" class="option">Super Food</li>
+                                        <li data-value="Cocunut Oil" class="option">Cocunut Oil</li>
+                                        <li data-value="Black Rice" class="option">Black Rice</li>
+                                        <li data-value="Seeds and Nuts" class="option">Seeds and Nuts</li>
+                                        <li data-value="Pink Solt" class="option">Pink Solt</li>
+                                        <li data-value="Meat" class="option">Meat</li>
+                                    </ul>
+                                </div> -->
+                            </div>
+                            <input type="text" class="cat-input" placeholder="Write Keyword and Search">
+                            <button type="submit" class="cc-button">
+                                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-6 align-self-center">
+                    <div class="whit-cart d-flex justify-content-end">
+                        <div class="whit-cart-item align-self-center">
+                            <a href="#">
+                                <i class="fa-regular fa-heart heart-icon"></i>
+                                <div class="d-inline-block text-start">
+                                    <span class="whc-badge">0</span>
+                                    <p>Wishlist</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="whit-cart-item align-self-center">
+                            <div class="header-divider"></div>
+                        </div>
+                        <div class="whit-cart-item align-self-center">
+                            <a href="cart.html">
+                                <!-- <i class="fa-solid fa-cart-shopping"></i> -->
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <div class="d-inline-block text-start">
+                                    <span class="whc-badge" id="cart-count">0</span>
+                                    <p>Cart</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--MAIN HEADER-->
+    <section class="main-header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="header-hamburger d-xl-none my-auto">
+                    <div class="sidebar-toggle">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </div>
+                <div class="category-list dropdown">
+                    <div class="categories-link dropdown-toggle show" data-bs-toggle="dropdown" aria-expanded="true">
+                        <i class="fa-solid fa-bars"></i> <span>Browse Categories</span>
+                    </div>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="javascript:void(0)"><span>Cereal and Breakfast</span></a>
+                        </li>
+                        <li><a class="dropdown-item"><span>Sauces and Spices</span></a></li>
+                        <li><a class="dropdown-item"><span>Meat and Seafood</span></a></li>
+                        <li><a class="dropdown-item"><span>Beverages</span></a></li>
+                        <li><a class="dropdown-item"><span>Dairy &amp; Eggs</span></a></li>
+                        <li><a href="#" class="dropdown-item"> Mega Sale 11.11 </a></li>
+                        <li><a href="#" class="dropdown-item"> Top Selling Products </a></li>
+                    </ul>
+                </div>
+                <nav class="main-menu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="mega-items">
+                            <a href="products.html">Shop <i class="fa fa-angle-down"></i></a>
+                            <div class="mega-menu">
+                                <ul class="mega-menu-inner">
+                                    <li class="mega-menu-li">
+                                        <a href="#">Vegetables</a>
+                                        <ul>
+                                            <li><a href="#">Cucumber</a></li>
+                                            <li><a href="#">Tomato</a></li>
+                                            <li><a href="#">Potato</a></li>
+                                            <li><a href="#">Onion</a></li>
+                                            <li><a href="#">Chilli</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="mega-menu-li">
+                                        <a href="#">Seasonal Fruits</a>
+                                        <ul>
+                                            <li><a href="#">Papaya</a></li>
+                                            <li><a href="#">Mango</a></li>
+                                            <li><a href="#">Lime</a></li>
+                                            <li><a href="#">Guava</a></li>
+                                            <li><a href="#">Pomelo</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="mega-menu-li">
+                                        <a href="#">Annual Fruits</a>
+                                        <ul>
+                                            <li><a href="#">Mango</a></li>
+                                            <li><a href="#">Apple</a></li>
+                                            <li><a href="#">Pineapple</a></li>
+                                            <li><a href="#">Guava</a></li>
+                                            <li><a href="#">Orange</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="products.html">Product <i class="fa fa-angle-down"></i></a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Products Details</a></li>
+                                <li><a href="#">Variable Product</a></li>
+                                <li><a href="#">Affiliate product</a></li>
+                                <li><a href="#">Countdown Product</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Blog</a></li>
+                        <!-- <li><a href="#">Pages <i class="fa fa-angle-down"></i></a></li> -->
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </nav>
+                <div class="navbar-contact-area">
+                    <i class="fa-solid fa-phone"></i>
+                    <div class="navbar-contact-area-end">
+                        <p>Hotline</p>
+                        <h4><a href="#">(0183) 547-6985</a></h4>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </section>
+    <!--Main Banner-->
+    <section class="main-banner">
+        <div class="container">
+            <div class="banner-content">
+                <h2>Shop</h2>
+                <p>Home / Shop</p>
+            </div>
+        </div>
+    </section>
+    <!--Footer-->
+    <!--Main Shop-->
+    <section class="main-shop">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-12">
+                    <div class="shop-widget">
+                        <h3 class="sw-title">Filter By Categories</h3>
+                        <ul>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="fil-field-1">
+                                    <label class="form-check-label" for="fil-field-1">Vegetables</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="fil-field-1">
+                                    <label class="form-check-label" for="fil-field-1">Coffe and Tea</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="fil-field-1">
+                                    <label class="form-check-label" for="fil-field-1">Seeds and Nuts</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="fil-field-1">
+                                    <label class="form-check-label" for="fil-field-1">Fruits</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="fil-field-1">
+                                    <label class="form-check-label" for="fil-field-1">Fish</label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-md-8 col-12">
+                    <div class="row products-cards" id="shopContainer"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer" id="footer">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="footer-about">
+                        <h4>About The Shop</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Curabitur sed</p>
+                        <ul class="about-list">
+                            <li>
+                                <i class="fa-regular fa-envelope"></i>
+                                <span><a href="#">Support@example.com</a></span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-phone-flip"></i>
+                                <span><a href="#">+0985474624225</a></span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span>1585 Straford Park Allen,<br> KY 41601</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="footer-about">
+                        <h4>Products</h4>
+                        <ul>
+                            <li><a href="#">Prices Drop</a></li>
+                            <li><a href="#">New Products</a></li>
+                            <li><a href="#">Best Sales</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Sitemap</a></li>
+                            <li><a href="#">Stores</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="footer-about">
+                        <h4>Our Company</h4>
+                        <ul>
+                            <li><a href="#">Delivery</a></li>
+                            <li><a href="#">Legal Notice</a></li>
+                            <li><a href="#">Terms And Conditions</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Secure Payment</a></li>
+                            <li><a href="#">My Account</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="footer-about">
+                        <h4>Your Account</h4>
+                        <ul>
+                            <li><a href="#">Product Support</a></li>
+                            <li><a href="#">Checkout</a></li>
+                            <li><a href="#">License Policy</a></li>
+                            <li><a href="#">Affiliate</a></li>
+                            <li><a href="#">Locality</a></li>
+                            <li><a href="#">Order Tracking</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="footer-about">
+                        <h4>Download App</h4>
+                        <p>Download our app to access <br>exclusive savings! Enjoy a fantastic <br> 15% discount!</p>
+                        <div class="store-icons">
+                            <a href="#"><img src="assets/imgs/footer/app-store.svg" alt="app-photo"></a>
+                            <a href="#"><img src="assets/imgs/footer/google-play.svg" alt="app-photo"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-12">
+                        <div class="copyright">
+                            <p>Copyright © 2025. All Rights Reserved.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-12">
+                        <ul class="footer-social-link">
+                            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-12">
+                        <div class="payment-logo">
+                            <a href="#"><img src="assets/imgs/footer/visa.png" alt="visa-logo"></a>
+                            <a href="#"><img src="assets/imgs/footer/mastercard.png" alt="masterCard-logo"></a>
+                            <a href="#"><img src="assets/imgs/footer/instapay.jpg" alt="instaPay-logo"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Scroll top-->
+    <div class="scroll-top-wrapper">
+        <div id="scrollTopBtn" class="scroll-top-btn">
+            <i class="fa-solid fa-arrow-up"></i>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/allProducts.js"></script>
+    <script src="assets/js/scrpit.js"></script>
+</body>
+
+</html>
