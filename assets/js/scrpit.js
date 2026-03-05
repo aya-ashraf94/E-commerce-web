@@ -121,7 +121,7 @@ document.addEventListener("click", function (e) {
 
     const title = productCard.querySelector("h3 a").innerText;
     const priceText = productCard.querySelector(".current-price").innerText;
-    const image = productCard.querySelector("img").src;
+    const image = productCard.querySelector("img").getAttribute("src");
     const productId = productCard.getAttribute("data-id");
 
     // نستخرج الرقم من السعر ($200.00 → 200)
